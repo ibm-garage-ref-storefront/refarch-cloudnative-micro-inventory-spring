@@ -1,0 +1,3 @@
+id: "20200415143554.38181000"
+project-name: refarch-cloudnative-micro-inventory-spring
+stack: docker.io/appsody/java-spring-boot2:0.3
