@@ -174,7 +174,7 @@ d88a6e5973de        mysql:5.7.14                    "docker-entrypoint.s…"   4
 
 Now, you can validate the application as follows.
 
-- Try to hit http://localhost:8080/micro/inventory and you should be able to see a list of items as follows.
+- Try to hit http://localhost:8080/micro/inventory and you should be able to see a list of items.
 
 - You can also do it using the below command.
 
