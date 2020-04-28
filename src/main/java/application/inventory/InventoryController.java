@@ -5,17 +5,22 @@ import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
 
 import application.inventory.models.Inventory;
 import application.inventory.models.InventoryRepo;
+import io.swagger.annotations.Api;
+import io.swagger.annotations.ApiOperation;
 
 /**
  * REST Controller to manage Inventory database
  *
  */
 @RestController("inventoryController")
+@Api(value="Inventory API")
+@RequestMapping("/")
 public class InventoryController {
 	
 	Logger logger =  LoggerFactory.getLogger(InventoryController.class);
@@ -27,6 +32,7 @@ public class InventoryController {
 	/**
 	 * @return all items in inventory
 	 */
+	@ApiOperation(value = "View a list of available items")
 	@GetMapping("/inventory")
 	@ResponseBody Iterable<Inventory> getInventory() {
 		return itemsRepo.findAll();
